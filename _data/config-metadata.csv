@@ -1,0 +1,24 @@
+field,display_name,browse_link,external_link,dc_map,schema_map
+identiteitscode,Identiteitscode · 001,,,DCTERMS.identifier,identifier
+title,Titel · 245 $a,,,DCTERMS.title,headline
+creator,Maker · 100 $a,true,,DCTERMS.creator,creator
+rol,Rol · 100 $e,,,,
+date,Jaar · 264 $c,true,,DCTERMS.date,dateCreated
+plaats,Plaats · 264 $a,true,,,
+description,Beschrijving · 520 $a,,,DCTERMS.description,description
+subject,Onderwerpen · 650 $a,true,,DCTERMS.subject,keywords
+genre,Genre · 655 $a,true,,DCTERMS.type,genre
+omvang,Omvang · 300 $a,,,DCTERMS.extent,
+afmetingen,Afmetingen · 300 $c,,,,
+materiaal,Materiaal · 340 $a,true,,DCTERMS.medium,material
+techniek,Techniek · 340 $d,true,,,
+inhoudstype,Inhoudstype · 336 $a,,,,
+reeks,Reeks · 490 $a,true,,DCTERMS.isPartOf,isPartOf
+herkomst,Herkomst · 561 $a,,,DCTERMS.provenance,
+verwerving,Verwerving · 541 $c $d,,,,
+overeenkomst,Overeenkomst · 541 $e,,,,
+digitaal_origineel,Digitaal origineel · 347 $a,,,,
+beschrijving_door,Beschreven door · 583 $k,,,,
+toegang,Toegang · 506 $a,true,,DCTERMS.accessRights,
+opmerking,Opmerking · 500 $a,,,,
+rights,Rechten · 540 $a,,,DCTERMS.rights,license

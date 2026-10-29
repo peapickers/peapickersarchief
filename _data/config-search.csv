@@ -1,0 +1,11 @@
+field,index,display
+identiteitscode,true,true
+title,true,true
+creator,true,true
+date,true,true
+description,true,false
+subject,true,false
+genre,true,false
+techniek,true,false
+reeks,true,false
+toegang,true,false

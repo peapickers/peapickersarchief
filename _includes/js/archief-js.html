@@ -1,0 +1,141 @@
+{%- assign items = site.data[site.metadata] | where_exp: 'item','item.objectid and item.parentid == nil' -%}
+<script>
+(function () {
+    // Alle velden die de beelden beschrijven; meerdere waarden staan gescheiden door ";".
+    var FACETTEN = [
+        { veld: 'creator', naam: 'Maker' },
+        { veld: 'date', naam: 'Jaar' },
+        { veld: 'subject', naam: 'Onderwerp' },
+        { veld: 'genre', naam: 'Genre' },
+        { veld: 'techniek', naam: 'Techniek' },
+        { veld: 'materiaal', naam: 'Materiaal' },
+        { veld: 'inhoudstype', naam: 'Inhoudstype' },
+        { veld: 'plaats', naam: 'Plaats' },
+        { veld: 'reeks', naam: 'Reeks' },
+        { veld: 'toegang', naam: 'Toegang' }
+    ];
+    var items = [
+        {% for item in items %}{
+            id: {{ item.objectid | jsonify }},
+            title: {{ item.title | strip | jsonify }},
+            code: {{ item.identiteitscode | jsonify }},
+            img: {% if item.image_small or item.image_thumb %}{{ item.image_small | default: item.image_thumb | relative_url | jsonify }}{% else %}null{% endif %},
+            alt: {{ item.image_alt_text | default: item.title | jsonify }},
+            beschrijving: {{ item.description | jsonify }},
+            creator: {{ item.creator | jsonify }}, date: {{ item.date | jsonify }}, subject: {{ item.subject | jsonify }},
+            genre: {{ item.genre | jsonify }}, techniek: {{ item.techniek | jsonify }}, materiaal: {{ item.materiaal | jsonify }},
+            inhoudstype: {{ item.inhoudstype | jsonify }}, plaats: {{ item.plaats | jsonify }}, reeks: {{ item.reeks | jsonify }}, toegang: {{ item.toegang | jsonify }},
+            href: {{ '/items/' | append: item.objectid | append: '.html' | relative_url | jsonify }}
+        }{% unless forloop.last %},{% endunless %}{% endfor %}
+    ];
+
+    function waarden(item, veld) {
+        return String(item[veld] || '').split(';').map(function (w) { return w.trim(); }).filter(Boolean);
+    }
+    function esc(s) {
+        return String(s).replace(/[&<>"']/g, function (c) { return { '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;' }[c]; });
+    }
+
+    var gekozen = {};
+    FACETTEN.forEach(function (f) { gekozen[f.veld] = new Set(); });
+    var zoek = document.getElementById('pp-zoek');
+    var facDiv = document.getElementById('pp-facetten');
+    var itemsDiv = document.getElementById('pp-items');
+
+    // Filters bouwen: elke facet een vaste, altijd open lijst met vinkjes.
+    FACETTEN.forEach(function (f) {
+        var alle = {};
+        items.forEach(function (it) { waarden(it, f.veld).forEach(function (w) { alle[w] = true; }); });
+        var lijst = Object.keys(alle).sort(function (a, b) { return a.localeCompare(b, 'nl', { numeric: true }); });
+        if (!lijst.length) return;
+        var html = '<fieldset class="pp-facet"><legend>' + f.naam + '</legend>';
+        lijst.forEach(function (w, i) {
+            var id = 'pp-' + f.veld + '-' + i;
+            html += '<div class="form-check"><input class="form-check-input" type="checkbox" id="' + id + '" data-veld="' + f.veld + '" value="' + esc(w) + '">' +
+                '<label class="form-check-label d-flex justify-content-between gap-2" for="' + id + '"><span>' + esc(w) + '</span><span class="pp-telling" data-veld="' + f.veld + '" data-waarde="' + esc(w) + '"></span></label></div>';
+        });
+        facDiv.insertAdjacentHTML('beforeend', html + '</fieldset>');
+    });
+
+    function past(it, behalveVeld) {
+        var q = zoek.value.trim().toLowerCase();
+        if (q) {
+            var tekst = [it.title, it.code, it.beschrijving].concat(FACETTEN.map(function (f) { return it[f.veld]; })).join(' ').toLowerCase();
+            if (tekst.indexOf(q) === -1) return false;
+        }
+        return FACETTEN.every(function (f) {
+            if (f.veld === behalveVeld || !gekozen[f.veld].size) return true;
+            return waarden(it, f.veld).some(function (w) { return gekozen[f.veld].has(w); });
+        });
+    }
+
+    function tegel(it) {
+        // Archiefstukken zonder publiek beeld: donkere tegel met code en reden, geen beeld.
+        if (!it.img) {
+            return '<a class="poster-tegel poster-zonder-beeld" href="' + it.href + '">' +
+                '<span class="poster-leeg"><span class="poster-code">' + esc(it.code) + '</span><span class="poster-maker">' + esc(it.toegang || 'Enkel beschrijving') + '</span></span>' +
+                '<span class="poster-overlay"><span class="poster-titel">' + esc(it.title) + '</span>' +
+                (it.creator ? '<span class="poster-maker">' + esc(it.creator) + (it.date ? ', ' + esc(it.date) : '') + '</span>' : '') + '</span></a>';
+        }
+        return '<a class="poster-tegel" href="' + it.href + '">' +
+            '<img class="lazyload" src="data:image/svg+xml,%3Csvg xmlns=\'http://www.w3.org/2000/svg\' viewBox=\'0 0 3 4\'%3E%3C/svg%3E" data-src="' + it.img + '" alt="' + esc(it.alt) + '">' +
+            '<span class="poster-overlay"><span class="poster-titel">' + esc(it.title) + '</span>' +
+            (it.creator ? '<span class="poster-maker">' + esc(it.creator) + (it.date ? ', ' + esc(it.date) : '') + '</span>' : '') +
+            '<span class="poster-code">' + esc(it.code) + '</span></span></a>';
+    }
+
+    function teken() {
+        var res = items.filter(function (it) { return past(it); });
+        var weergave = document.querySelector('input[name="pp-weergave"]:checked').value;
+        document.getElementById('pp-aantal').textContent = res.length + (res.length === 1 ? ' archiefstuk' : ' archiefstukken');
+
+        // Tellingen: hoeveel archiefstukken je krijgt als je die waarde (ook) aanvinkt.
+        document.querySelectorAll('.pp-telling').forEach(function (el) {
+            var veld = el.dataset.veld, w = el.dataset.waarde;
+            var n = items.filter(function (it) { return past(it, veld) && waarden(it, veld).indexOf(w) > -1; }).length;
+            el.textContent = n;
+            el.closest('.form-check').classList.toggle('pp-leeg', n === 0);
+        });
+
+        if (!res.length) { itemsDiv.innerHTML = '<p>Geen archiefstukken voor deze filters.</p>'; return; }
+        if (weergave === 'jaar') {
+            var perJaar = {};
+            res.forEach(function (it) { var j = it.date || 'Zonder jaar'; (perJaar[j] = perJaar[j] || []).push(it); });
+            itemsDiv.innerHTML = Object.keys(perJaar).sort().map(function (j) {
+                return '<section class="pp-jaar"><h3 class="h5">' + esc(j) + ' <span class="small fw-normal">(' + perJaar[j].length + ')</span></h3>' +
+                    '<div class="pp-strook" tabindex="0" aria-label="Archiefstukken uit ' + esc(j) + ', horizontaal scrollbaar">' +
+                    perJaar[j].map(function (it) { return '<div class="pp-strook-item">' + tegel(it) + '</div>'; }).join('') + '</div></section>';
+            }).join('');
+        } else {
+            itemsDiv.innerHTML = '<div class="row g-3">' + res.map(function (it) { return '<div class="col-6 col-xl-4">' + tegel(it) + '</div>'; }).join('') + '</div>';
+        }
+    }
+
+    facDiv.addEventListener('change', function (e) {
+        var cb = e.target; if (!cb.dataset.veld) return;
+        gekozen[cb.dataset.veld][cb.checked ? 'add' : 'delete'](cb.value);
+        teken();
+    });
+    zoek.addEventListener('input', teken);
+    document.querySelectorAll('input[name="pp-weergave"]').forEach(function (r) { r.addEventListener('change', teken); });
+    document.getElementById('pp-reset').addEventListener('click', function () {
+        zoek.value = '';
+        facDiv.querySelectorAll('input:checked').forEach(function (cb) { cb.checked = false; });
+        FACETTEN.forEach(function (f) { gekozen[f.veld].clear(); });
+        teken();
+    });
+    // Links zoals /index.html#creator:Voorbeeldmaker%2C%20A. (vanaf de archiefstukpagina's en de archiefvormers) zetten meteen een filter aan.
+    function vanHash() {
+        var h = decodeURIComponent(location.hash.slice(1)); var i = h.indexOf(':');
+        if (i < 1) return;
+        var veld = h.slice(0, i), w = h.slice(i + 1);
+        if (!gekozen[veld]) return;
+        facDiv.querySelectorAll('input[data-veld="' + veld + '"]').forEach(function (cb) {
+            if (cb.value === w) { cb.checked = true; gekozen[veld].add(w); }
+        });
+    }
+    vanHash();
+    window.addEventListener('hashchange', function () { vanHash(); teken(); });
+    teken();
+})();
+</script>

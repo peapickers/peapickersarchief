@@ -1,0 +1,18 @@
+<!doctype html>
+<html lang="nl" class="h-100">
+  <head prefix="og: http://ogp.me/ns#">
+    {% include head/head.html %}
+  </head>
+  <body class="d-flex flex-column h-100">
+    <div id="skip-to-content"><a href="#maincontent">Naar de inhoud</a></div>
+    <div class="voorbeeld-strook text-center small py-1">Voorbeeldarchief. Alle kunstenaars en archiefstukken op deze site zijn fictieve placeholders.</div>
+    {% include collection-banner.html %}
+    {% include collection-nav.html %}
+    <main id="maincontent" role="main" class="flex-shrink-0">
+      {{ content }}
+    </main>
+    {% include footer.html %}
+    {% include foot.html %}
+    {% include scroll-to-top.html %}
+  </body>
+</html>

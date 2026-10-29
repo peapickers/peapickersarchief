@@ -1,0 +1,90 @@
+/* Peapickers Archive: eggshell, zwart, Courier Prime, kaders van 1 px (zelfde basis als Peapicker's Postershop, die #F7F7F6 gebruikt) */
+$eggshell: #F0EAD6;
+$ink: #111111;
+
+body, .bg-light, .navbar.bg-light, .card, .modal-content, .list-group-item, .dropdown-menu, .table, footer, #footer {
+  background-color: $eggshell !important;
+  color: $ink;
+}
+.table { --bs-table-bg: #{$eggshell}; --bs-table-color: #{$ink}; }
+h1, h2, h3, h4, h5, .navbar-brand, .btn, .form-control, .badge {
+  font-family: 'Courier Prime', 'Courier New', Courier, monospace;
+}
+a { color: $ink; text-decoration: underline; text-underline-offset: 2px; }
+.navbar { border-bottom: 1px solid $ink; }
+.card, .form-control, .list-group-item, .modal-content { border: 1px solid $ink !important; border-radius: 0 !important; }
+.btn, .badge { border-radius: 0 !important; }
+.btn-primary, .btn-dark, .bg-primary, .bg-dark, .btn-outline-primary:hover, .btn-outline-dark:hover {
+  background-color: $ink !important; border-color: $ink !important; color: $eggshell !important;
+}
+.btn-outline-primary, .btn-outline-dark, .btn-secondary, .btn-outline-secondary {
+  background-color: transparent; border: 1px solid $ink !important; color: $ink !important;
+}
+.text-primary { color: $ink !important; }
+img { filter: none; }
+#metadata dt, .item-metadata dt, dt { font-weight: 700; }
+.breadcrumb, nav[aria-label="breadcrumb"] .breadcrumb { background-color: transparent !important; border: 1px solid $ink; border-radius: 0; }
+.alert-warning { background-color: $eggshell; color: $ink; border: 1px dashed $ink; border-radius: 0; }
+.cloud, #cloud, .card-body, h1, h2 { overflow-wrap: anywhere; }
+a[class*="tagcloud"] { white-space: normal; max-width: 100%; overflow-wrap: anywhere; }
+/* gekozen knop in inkt */
+.btn-check:checked + .btn, .btn-check:checked + .btn:hover { background-color: $ink !important; color: $eggshell !important; border-color: $ink !important; }
+/* Archief: tegels met enkel het beeld, overlay bij hover of focus */
+.poster-tegel { position: relative; display: block; border: 1px solid $ink; background: $ink; text-decoration: none; overflow: hidden; }
+.poster-tegel img { display: block; width: 100%; height: auto; transition: filter .2s ease; }
+.poster-tegel .poster-overlay { position: absolute; inset: 0; display: flex; flex-direction: column; justify-content: flex-end; gap: .25rem; padding: .75rem; color: $eggshell; opacity: 0; transition: opacity .2s ease; overflow-wrap: anywhere; }
+.poster-tegel:hover img, .poster-tegel:focus-visible img { filter: brightness(.6); }
+.poster-tegel:hover .poster-overlay, .poster-tegel:focus-visible .poster-overlay { opacity: 1; }
+.poster-tegel:focus-visible { outline: 2px solid $ink; outline-offset: 2px; }
+.poster-titel { font-family: 'Courier Prime', 'Courier New', monospace; font-weight: 700; font-size: 1.1rem; line-height: 1.2; }
+.poster-maker, .poster-code { font-size: .8rem; }
+.poster-leeg { display: block; aspect-ratio: 3 / 4; }
+@media (prefers-reduced-motion: reduce) { .poster-tegel img, .poster-tegel .poster-overlay { transition: none; } }
+/* Over-pagina: geen aparte achtergrond voor kop en inhoudstafel */
+#about-feature, #about-toc-wrapper, #about-toc, #about-toc-list, #about-toc .btn-light { background-color: $eggshell !important; }
+
+// strook bovenaan: voorbeeldsite zonder verkoop
+.voorbeeld-strook { background: #1a1a1a; color: #F7F7F6; }
+
+
+// Archiefoverzicht: filters links (ongeveer 30%), altijd open
+.pp-browse { display: flex; flex-direction: column; gap: 1.5rem; }
+.pp-filters { border: 1px solid $ink; padding: 1rem; background: $eggshell; }
+.pp-resultaat { min-width: 0; }
+@media (min-width: 992px) {
+  .pp-browse { flex-direction: row; align-items: flex-start; }
+  .pp-filters { flex: 0 0 30%; max-width: 30%; position: sticky; top: 1rem; max-height: calc(100vh - 2rem); overflow-y: auto; }
+  .pp-resultaat { flex: 1 1 auto; }
+}
+.pp-facet { margin-bottom: 1rem; }
+.pp-facet legend { font-size: .95rem; font-weight: 700; margin-bottom: .25rem; border-bottom: 1px solid $ink; }
+.pp-facet .form-check { font-size: .85rem; }
+.pp-facet .form-check-input:checked { background-color: $ink; border-color: $ink; }
+.pp-telling { color: #6b6b6b; }
+.pp-leeg { opacity: .45; }
+// Per jaar: één horizontaal scrollbare strook per jaar
+.pp-jaar { margin-bottom: 1.5rem; }
+.pp-strook { display: flex; gap: 1rem; overflow-x: auto; scroll-snap-type: x mandatory; padding-bottom: .5rem; }
+.pp-strook:focus-visible { outline: 2px solid $ink; outline-offset: 2px; }
+.pp-strook-item { flex: 0 0 60%; scroll-snap-align: start; }
+@media (min-width: 576px) { .pp-strook-item { flex-basis: 220px; } }
+
+// Archiefstukken zonder publiek beeld: donkere tegel met de code, zelfde verhouding als een beeld
+.poster-zonder-beeld .poster-leeg { display: flex; flex-direction: column; justify-content: center; gap: .35rem; padding: .75rem; color: $eggshell; background: repeating-linear-gradient(135deg, #111 0 10px, #1d1d1d 10px 20px); }
+.poster-zonder-beeld:hover .poster-leeg, .poster-zonder-beeld:focus-visible .poster-leeg { opacity: .35; }
+
+// Beelden niet slepen of selecteren; het watermerk is de echte bescherming
+.gallery-img img, .poster-tegel img, #item-metadata img { -webkit-user-drag: none; user-select: none; }
+
+// Archiefvormers: een kaart per maker
+.av-lijst { display: grid; gap: 1rem; grid-template-columns: 1fr; }
+@media (min-width: 768px) { .av-lijst { grid-template-columns: 1fr 1fr; } }
+.av-kaart { border: 1px solid $ink; padding: 1rem; min-width: 0; overflow-wrap: anywhere; }
+.av-kaart h2 { font-size: 1.15rem; margin-bottom: .25rem; }
+.av-kaart dl { display: grid; grid-template-columns: auto 1fr; gap: .15rem .75rem; font-size: .85rem; margin: .75rem 0; }
+.av-kaart dd { margin: 0; }
+.av-beelden { display: flex; gap: .4rem; margin-top: .5rem; }
+.av-beelden img, .av-beelden .av-leeg { width: 64px; height: 64px; object-fit: cover; border: 1px solid $ink; background: #111; }
+
+// Beeld op de archiefstukpagina past altijd in het scherm
+.gallery-img img { max-height: 80vh; width: auto; }
