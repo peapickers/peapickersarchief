@@ -49,6 +49,16 @@ Elk archiefstuk krijgt een vaste code die nooit verandert, bijvoorbeeld **ARCHIE
 - **003** is het nummer van de archiefvormer (de maker);
 - **07** is het volgnummer van het stuk bij die maker.
 
+## Het archief zichtbaar maken {#zichtbaar-maken}
+
+Het grootste deel van dit archief zal onzichtbaar blijven. Jij kan helpen om het zichtbaar te maken:
+
+- **Ken je iemand die maakt** buiten de kunstindustrie, en wiens werk bewaard verdient te worden? Breng ons in contact.
+- **Maak je zelf** en wil je je werk in bewaring geven? Laat het weten. We beginnen altijd met een gesprek.
+- **Herken je iets** in een archiefstuk: een plek, een moment, een verhaal? Stuur het door, met de code van het archiefstuk. Zo groeit de context.
+
+Contact: *[e-mailadres van het archief volgt]*
+
 ## Iets laten verwijderen
 
 Ben je maker en wil je dat een werk niet langer getoond wordt? Of sta je zelf in beeld en wil je dat niet? Laat het weten aan de archivaris met de code van het archiefstuk. Het beeld gaat offline binnen de week, zonder discussie.
