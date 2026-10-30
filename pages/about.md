@@ -94,13 +94,15 @@ Het grootste deel van dit archief zal onzichtbaar blijven. Jij kan helpen om het
 - **Maak je zelf** en wil je je werk in bewaring geven? Laat het weten. We beginnen altijd met een gesprek.
 - **Herken je iets** in een archiefstuk: een plek, een moment, een verhaal? Stuur het door, met de code van het archiefstuk. Zo groeit de context.
 
-Contact: *[e-mailadres van het archief volgt]*
+Contact: [peapickers@proton.me](mailto:peapickers@proton.me)
 
 ## Iets laten verwijderen
 
 Ben je maker en wil je dat een werk niet langer getoond wordt? Of sta je zelf in beeld en wil je dat niet? Laat het weten aan de archivaris met de code van het archiefstuk. Het beeld gaat offline binnen de week, zonder discussie.
 
-Contact: *[e-mailadres van het archief volgt]*
+Hoe het archief met persoonsgegevens omgaat, staat in de [privacyverklaring]({{ '/privacy.html' | relative_url }}).
+
+Contact: [peapickers@proton.me](mailto:peapickers@proton.me)
 
 ## Wie het archief beheert
 
