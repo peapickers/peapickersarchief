@@ -50,6 +50,7 @@ Een archiefvormer is de auteur die zijn of haar werk in bewaring geeft. Elke arc
     <p class="small mb-1">Archiefvormer {{ av.nummer }}</p>
     <h2>{{ av.naam }}</h2>
     <p class="mb-0">{{ av.praktijk | capitalize }}, {{ av.plaats }}</p>
+    <p class="av-bekijk mt-2 mb-0"><a href="{{ '/index.html#creator:' | append: av.naam | relative_url }}">Bekijk de {{ av.aantal }} archiefstukken</a></p>
     <dl>
         <dt>Periode</dt><dd>{{ av.periode }}</dd>
         <dt>In bewaring sinds</dt><dd>{{ av.datum }}</dd>
@@ -61,7 +62,6 @@ Een archiefvormer is de auteur die zijn of haar werk in bewaring geeft. Elke arc
         {% for s in metbeeld limit: 4 %}<img src="{{ s.image_thumb | relative_url }}" alt="" loading="lazy">{% endfor %}
         {% if metbeeld.size == 0 %}<span class="av-leeg"></span><span class="small align-self-center">Geen beelden openbaar</span>{% endif %}
     </div>
-    <p class="mt-3 mb-0"><a href="{{ '/index.html#creator:' | append: av.naam | relative_url }}">Bekijk de {{ av.aantal }} archiefstukken</a></p>
 </section>
 {% endfor %}
         </div>
