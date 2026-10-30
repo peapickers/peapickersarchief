@@ -6,7 +6,7 @@ permalink: /archiefvormers.html
 
 ## Archiefvormers
 
-Een archiefvormer is de maker die zijn of haar werk in bewaring geeft. Elke archiefvormer krijgt een nummer: dat is het middelste deel van de code van elk archiefstuk (ARCHIEFSTUK2026-**003**-07 is het zevende stuk van archiefvormer 003).
+Een archiefvormer is de auteur die zijn of haar werk in bewaring geeft. Elke archiefvormer krijgt een nummer: dat is het middelste deel van de code van elk archiefstuk (ARCHIEFSTUK2027-**003**-07 is het zevende stuk van archiefvormer 003).
 
 {% include feature/alert.html text="Voorbeeld. Alle archiefvormers op deze pagina zijn fictief." color="warning" %}
 

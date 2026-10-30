@@ -1,6 +1,6 @@
 field,display_name,btn,hidden,sort_name,facet_name
 identiteitscode,,,,Identiteitscode,
-creator,Maker,,,Maker,Maker
+creator,Auteur,,,Auteur,Auteur
 date,Jaar,,,Jaar,Jaar
 genre,,true,,,Genre
 reeks,,true,,,Reeks

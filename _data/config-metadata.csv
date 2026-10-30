@@ -1,7 +1,7 @@
 field,display_name,browse_link,external_link,dc_map,schema_map
 identiteitscode,Identiteitscode · 001,,,DCTERMS.identifier,identifier
 title,Titel · 245 $a,,,DCTERMS.title,headline
-creator,Maker · 100 $a,true,,DCTERMS.creator,creator
+creator,Auteur · 100 $a,true,,DCTERMS.creator,creator
 rol,Rol · 100 $e,,,,
 date,Jaar · 264 $c,true,,DCTERMS.date,dateCreated
 plaats,Plaats · 264 $a,true,,,

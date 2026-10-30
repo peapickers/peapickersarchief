@@ -24,7 +24,7 @@ Voorbeeldarchief: 10 fictieve archiefvormers (Voorbeeldmaker A tot J) met samen 
 
 ## Codes
 
-`ARCHIEFSTUK2026-003-07` = in **2026** in het archief gekomen, archiefvormer **003**, zevende stuk. Dezelfde codering als de postershop. Een code verandert nooit en wordt nooit hergebruikt.
+`ARCHIEFSTUK2027-003-07` = in **2027** in het archief gekomen, archiefvormer **003**, zevende stuk. Dezelfde codering als de postershop. Een code verandert nooit en wordt nooit hergebruikt.
 
 ## Toegang per archiefstuk (kolom `toegang`)
 

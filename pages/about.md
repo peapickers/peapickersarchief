@@ -43,9 +43,9 @@ De makers blijven eigenaar van hun werk en houden alle auteursrechten. Het archi
 
 ## Codes
 
-Elk archiefstuk krijgt een vaste code die nooit verandert, bijvoorbeeld **ARCHIEFSTUK2026-003-07**:
+Elk archiefstuk krijgt een vaste code die nooit verandert, bijvoorbeeld **ARCHIEFSTUK2027-003-07**:
 
-- **2026** is het jaar waarin het stuk in het archief kwam;
+- **2027** is het jaar waarin het stuk in het archief kwam;
 - **003** is het nummer van de archiefvormer (de maker);
 - **07** is het volgnummer van het stuk bij die maker.
 

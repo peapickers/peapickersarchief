@@ -1,0 +1,76 @@
+{% comment %}
+    Public Ledger van Peapickers Archive: elk administratief stuk als YYYY-MM-DD_titel, in volgorde van datum.
+    Data: _data/ledger.csv. Documenten staan in ledger/ en heten zoals de kolom "naam".
+{% endcomment %}
+{%- assign stukken = site.data.ledger | sort: "datum" -%}
+{%- assign soorten = site.data.ledger | map: "soort" | uniq | sort -%}
+{%- assign echt = site.data.ledger | where: "status", "echt" -%}
+<div class="ledger-telling">
+    <p><strong>{{ site.data.ledger | size }}</strong> stukken, waarvan <strong>{{ echt | size }}</strong> echt en {{ site.data.ledger | size | minus: echt.size }} voorbeelden.</p>
+</div>
+
+<form class="ledger-filters" aria-label="Filters" onsubmit="return false">
+    <div>
+        <label class="form-label" for="ledger-soort">Soort</label>
+        <select class="form-select" id="ledger-soort">
+            <option value="">Alle soorten</option>
+            {% for s in soorten %}<option value="{{ s }}">{{ s }}</option>{% endfor %}
+        </select>
+    </div>
+    <div>
+        <label class="form-label" for="ledger-av">Archiefvormer</label>
+        <select class="form-select" id="ledger-av">
+            <option value="">Alle archiefvormers</option>
+            {% for av in site.data.archiefvormers %}<option value="{{ av.nummer }}">{{ av.nummer }} · {{ av.naam }}</option>{% endfor %}
+        </select>
+    </div>
+    <div>
+        <label class="form-label" for="ledger-status">Status</label>
+        <select class="form-select" id="ledger-status">
+            <option value="">Echt en voorbeeld</option>
+            <option value="echt">Enkel echte stukken</option>
+            <option value="voorbeeld">Enkel voorbeelden</option>
+        </select>
+    </div>
+    <div>
+        <label class="form-label" for="ledger-zoek">Zoeken</label>
+        <input class="form-control" type="search" id="ledger-zoek" placeholder="titel, code ...">
+    </div>
+</form>
+<p class="small" id="ledger-aantal" role="status" aria-live="polite"></p>
+
+<ol class="ledger-lijst">
+{% for r in stukken %}
+<li class="ledger-stuk{% if r.status == 'echt' %} ledger-echt{% endif %}" data-soort="{{ r.soort }}" data-av="{{ r.archiefvormer }}" data-status="{{ r.status }}">
+    <div class="ledger-kop">
+        <span class="ledger-naam">{% if r.document %}<a href="{{ r.document | prepend: '/' | relative_url }}">{{ r.naam }}</a>{% else %}{{ r.naam }}{% endif %}</span>
+        <span class="ledger-labels"><span class="ledger-label">{{ r.soort }}</span>{% if r.status == 'echt' %}<span class="ledger-label ledger-label-echt">Echt</span>{% else %}<span class="ledger-label ledger-label-vb">Voorbeeld</span>{% endif %}</span>
+    </div>
+    <p class="mb-1">{{ r.beschrijving }}</p>
+    <p class="ledger-meta mb-0">
+        {% if r.archiefvormer %}{% assign av = nil %}{% for a in site.data.archiefvormers %}{% if a.nummer == r.archiefvormer %}{% assign av = a %}{% endif %}{% endfor %}Archiefvormer <a href="{{ '/archiefvormers.html#av' | append: r.archiefvormer | relative_url }}">{{ r.archiefvormer }} · {{ av.naam }}</a>{% endif %}
+        {% if r.archiefstukken %}<span>· {{ r.archiefstukken }}</span>{% endif %}
+        {% if r.document %}<span>· <a href="{{ r.document | prepend: '/' | relative_url }}">document (pdf)</a></span>{% elsif r.status == 'voorbeeld' %}<span>· geen document: fictief voorbeeld</span>{% endif %}
+    </p>
+</li>
+{% endfor %}
+</ol>
+
+<script>
+(function () {
+    var velden = ['ledger-soort', 'ledger-av', 'ledger-status', 'ledger-zoek'].map(function (id) { return document.getElementById(id); });
+    var stukken = Array.prototype.slice.call(document.querySelectorAll('.ledger-stuk'));
+    function filter() {
+        var soort = velden[0].value, av = velden[1].value, status = velden[2].value, q = velden[3].value.trim().toLowerCase();
+        var n = 0;
+        stukken.forEach(function (li) {
+            var ok = (!soort || li.dataset.soort === soort) && (!av || li.dataset.av === av) &&
+                (!status || li.dataset.status === status) && (!q || li.textContent.toLowerCase().indexOf(q) > -1);
+            li.hidden = !ok; if (ok) n++;
+        });
+        document.getElementById('ledger-aantal').textContent = n + (n === 1 ? ' stuk' : ' stukken') + ' getoond';
+    }
+    velden.forEach(function (v) { v.addEventListener('input', filter); v.addEventListener('change', filter); });
+    filter();
+})();
+</script>
