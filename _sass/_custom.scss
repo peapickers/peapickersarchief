@@ -107,3 +107,7 @@ a[class*="tagcloud"] { white-space: normal; max-width: 100%; overflow-wrap: anyw
 .ledger-label-vb { border-style: dashed; }
 .ledger-meta { font-size: .85rem; }
 .ledger-echt { border-left: 4px solid $ink; padding-left: .75rem; }
+
+// Knoppen houden hun inktkader na een klik; enkel hover maakt ze zwart
+.btn-outline-dark:focus:not(:hover) { background-color: transparent !important; color: $ink !important; box-shadow: none; }
+.btn-outline-dark:focus-visible { outline: 2px solid $ink; outline-offset: 2px; }
