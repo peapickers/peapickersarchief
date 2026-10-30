@@ -84,8 +84,22 @@
             '<span class="poster-code">' + esc(it.code) + '</span></span></a>';
     }
 
+    // Volgorde van de tegels; Shuffle schudt ze door elkaar (Fisher-Yates).
+    var volgorde = items.slice();
+    function schud() {
+        for (var i = volgorde.length - 1; i > 0; i--) {
+            var j = Math.floor(Math.random() * (i + 1)); var t = volgorde[i]; volgorde[i] = volgorde[j]; volgorde[j] = t;
+        }
+    }
+
+    function wisFilters() {
+        zoek.value = '';
+        facDiv.querySelectorAll('input:checked').forEach(function (cb) { cb.checked = false; });
+        FACETTEN.forEach(function (f) { gekozen[f.veld].clear(); });
+    }
+
     function teken() {
-        var res = items.filter(function (it) { return past(it); });
+        var res = volgorde.filter(function (it) { return past(it); });
         var weergave = document.querySelector('input[name="pp-weergave"]:checked').value;
         document.getElementById('pp-aantal').textContent = res.length + (res.length === 1 ? ' archiefstuk' : ' archiefstukken');
 
@@ -119,9 +133,15 @@
     zoek.addEventListener('input', teken);
     document.querySelectorAll('input[name="pp-weergave"]').forEach(function (r) { r.addEventListener('change', teken); });
     document.getElementById('pp-reset').addEventListener('click', function () {
-        zoek.value = '';
-        facDiv.querySelectorAll('input:checked').forEach(function (cb) { cb.checked = false; });
-        FACETTEN.forEach(function (f) { gekozen[f.veld].clear(); });
+        wisFilters();
+        teken();
+    });
+    // Shuffle: filters weg, raster aan, alle archiefstukken in een nieuwe willekeurige volgorde.
+    document.getElementById('pp-shuffle').addEventListener('click', function () {
+        wisFilters();
+        document.getElementById('pp-w-raster').checked = true;
+        if (location.hash) history.replaceState(null, '', location.pathname + location.search);
+        schud();
         teken();
     });
     // Links zoals /index.html#creator:Voorbeeldmaker%2C%20A. (vanaf de archiefstukpagina's en de archiefvormers) zetten meteen een filter aan.
