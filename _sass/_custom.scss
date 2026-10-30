@@ -88,3 +88,8 @@ a[class*="tagcloud"] { white-space: normal; max-width: 100%; overflow-wrap: anyw
 
 // Beeld op de archiefstukpagina past altijd in het scherm
 .gallery-img img { max-height: 80vh; width: auto; }
+
+// Veiligheidsblok: zegt eerlijk dat lekkage onvermijdelijk is
+.veiligheidsblok { border: 2px solid $ink; padding: 1rem 1.25rem; margin: 1.5rem 0; background: $eggshell; overflow-wrap: anywhere; }
+.veiligheidsblok-kop { display: inline-block; margin: 0 0 .75rem; padding: .15rem .5rem; background: $ink; color: $eggshell; font-weight: 700; text-transform: uppercase; letter-spacing: .08em; font-size: .8rem; }
+.veiligheidsblok ul { margin-bottom: .75rem; padding-left: 1.25rem; }

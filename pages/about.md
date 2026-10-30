@@ -5,7 +5,7 @@ permalink: /about.html
 credits: true
 ---
 
-{% include feature/alert.html text="Voorlopige tekst bij een voorbeeldarchief. Alle archiefvormers en archiefstukken op deze site zijn fictief." color="warning" %}
+{% include feature/alert.html text="Voorlopige tekst bij een voorbeeldarchief. Alle archiefvormers en archiefstukken op deze site zijn fictief. De placeholderbeelden hebben een watermerk, maar zijn nog niet door Glaze gegaan." color="warning" %}
 
 ## Wat Peapickers Archive is
 
@@ -23,12 +23,19 @@ Het archief verkoopt niets. Er gaat geen geld in om: makers betalen niets en kri
 
 ## Veilig tonen
 
-- **Verkleind.** Online staat nooit het originele bestand, alleen een kopie van hoogstens 1200 pixels: goed genoeg om te bekijken, te klein om te drukken.
-- **Watermerk.** Over elk beeld loopt schuin en onregelmatig de naam van de maker.
+{% include veiligheidsblok.html id="-over" %}
+
+Wat Peapickers doet om de beelden te beschermen:
+
+- **Verkleind.** Online staat nooit het originele bestand, alleen een kopie van hoogstens 1200 pixels: goed genoeg om te bekijken, te klein om groot te drukken.
+- **Watermerk.** Over elk beeld loopt schuin en onregelmatig de naam van de maker. Het watermerk zit in het beeld zelf en gaat er niet af.
+- **Glaze.** Na het watermerk gaat elk beeld door [Glaze](https://glaze.cs.uchicago.edu), een gratis programma van de Universiteit van Chicago. Glaze verandert de pixels zo dat je het nauwelijks ziet, maar een AI-model dat erop traint de stijl van de maker slecht leert. Onderzoekers hebben in 2025 laten zien dat zulke bescherming soms weer te verwijderen is, dus ook Glaze is geen garantie.
 - **Geen downloadknop.** Het archief biedt geen bestanden aan om te downloaden.
 - **Toegang per archiefstuk.** Bij elk stuk staat wat er getoond wordt: *Openbaar, met watermerk*, *Enkel beschrijving* (het beeld wordt bewaard maar niet getoond) of een *Embargo op het beeld* tot een datum die de maker kiest.
 - **Herkenbare personen.** Staat er iemand herkenbaar in beeld en is er geen toestemming van die persoon, dan tonen we enkel de beschrijving.
-- **Zoekmachines.** Zolang het archief in opbouw is, vraagt de site zoekmachines en AI-crawlers de pagina's niet op te nemen.
+- **Robots.txt.** De site vraagt AI-crawlers en, zolang het archief in opbouw is, ook zoekmachines om weg te blijven. Bonafide crawlers volgen die vraag, andere niet.
+
+Voor makers betekent dat: laat alleen online zetten wat je bereid bent te laten zien, ook als iemand het kopieert. Twijfel je, kies dan voor *Enkel beschrijving*. Je beeld blijft dan wel bewaard in het archief.
 
 ## Rechten
 

@@ -1,0 +1,15 @@
+{% comment %}
+    Veiligheidsblok van Peapickers Archive: zegt eerlijk dat elk beeld dat online staat gekopieerd kan worden.
+    Gebruikt op het archiefoverzicht, op elke archiefstukpagina en op "Over het archief".
+{% endcomment %}
+<aside class="veiligheidsblok" aria-labelledby="veiligheidsblok-kop{{ include.id }}">
+    <p class="veiligheidsblok-kop" id="veiligheidsblok-kop{{ include.id }}">Veiligheid</p>
+    <p><strong>Alles wat online staat, kan gekopieerd en hergebruikt worden zonder toestemming.</strong> Peapickers beveiligt elk beeld zo goed als het kan, maar lekkage is onvermijdelijk.</p>
+    <ul>
+        <li>een vast watermerk met de naam van de maker, over het hele beeld;</li>
+        <li>Glaze, een onzichtbare laag die AI-modellen hindert om de stijl van de maker na te bootsen;</li>
+        <li>alleen verkleinde beelden, zonder downloadknop;</li>
+        <li>een robots.txt die AI-crawlers en zoekmachines weigert.</li>
+    </ul>
+    <p class="mb-0">Geen van die maatregelen is een garantie. Een schermafbeelding kan altijd, er bestaan programma's die Glaze weer verwijderen, en een crawler kan robots.txt negeren.</p>
+</aside>
