@@ -13,14 +13,20 @@ Een archiefvormer is de auteur die zijn of haar werk in bewaring geeft. Elke arc
 {%- assign stukken = site.data[site.metadata] %}
 <div class="pp-browse">
     <aside class="pp-filters" aria-label="Filters">
-        <div class="d-flex justify-content-between align-items-baseline mb-2">
-            <h2 class="h5 mb-0">Filters</h2>
+        <details class="pp-filters-uitklap" id="av-filterblok">
+        <summary class="pp-filters-kop"><span class="h5 mb-0">Filters</span><span class="pp-filters-teken" aria-hidden="true"></span></summary>
+        <div class="d-flex justify-content-end mt-2 mb-2">
             <button type="button" class="btn btn-link btn-sm p-0 text-dark" id="av-reset">Alles wissen</button>
         </div>
         <label class="visually-hidden" for="av-zoek">Zoeken</label>
         <input type="search" class="form-control mb-3" id="av-zoek" placeholder="Zoeken ...">
         <div id="av-facetten"></div>
+        </details>
     </aside>
+    <script>
+    // Filters standaard open op brede schermen, dicht op gsm en tablet (zodat de archiefstukken meteen zichtbaar zijn).
+    if (window.matchMedia('(min-width: 992px)').matches) document.getElementById('av-filterblok').open = true;
+    </script>
 
     <section class="pp-resultaat" aria-label="Archiefvormers">
         <div class="d-flex flex-wrap justify-content-between align-items-center gap-2 mb-3">
