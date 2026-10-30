@@ -122,3 +122,39 @@ a[class*="tagcloud"] { white-space: normal; max-width: 100%; overflow-wrap: anyw
 .veiligheidsblok-meer summary { cursor: pointer; text-decoration: underline; text-underline-offset: 2px; }
 .veiligheidsblok-meer[open] summary { margin-bottom: .5rem; }
 .veiligheidsblok p:last-child, .veiligheidsblok-meer > p:last-child { margin-bottom: 0; }
+
+// Over: verwijzing bovenaan om eerst de pagina te lezen
+.lees-eerst { border: 2px solid $ink; padding: .75rem 1rem; }
+
+// Netwerk: interactieve grafiek van archivaris, archiefvormers en groepen
+.nw { display: flex; flex-direction: column; gap: 1rem; }
+.nw-veld { border: 1px solid $ink; height: 70vh; min-height: 420px; background: $papier; touch-action: none; }
+.nw-veld svg { width: 100%; height: 100%; display: block; cursor: grab; }
+@media (min-width: 992px) {
+  .nw { flex-direction: row; align-items: flex-start; }
+  .nw-paneel { flex: 0 0 26%; max-width: 26%; }
+  .nw-veld { flex: 1 1 auto; }
+}
+.nw-lijn { stroke: $ink; stroke-opacity: .55; stroke-width: 1.2; }
+.nw-lijn-lid { stroke-dasharray: 4 3; }
+.nw-knoop circle { stroke: $ink; stroke-width: 1.5; }
+.nw-knoop text { font-size: 11px; text-anchor: middle; fill: $ink; pointer-events: none; }
+.nw-knoop { cursor: pointer; outline: none; }
+.nw-knoop:focus-visible circle, .nw-gekozen circle { stroke-width: 4; }
+.nw-weg { display: none; }
+.nw-vaag { opacity: .15; }
+.nw-archivaris circle { fill: $papier; }
+.nw-bol.nw-archivaris { background: $papier; }
+.nw-archiefvormer circle { fill: $ink; }
+.nw-bol.nw-archiefvormer { background: $ink; }
+.nw-collectief circle { fill: #4C7A9E; }
+.nw-bol.nw-collectief { background: #4C7A9E; }
+.nw-club circle { fill: #B5793A; }
+.nw-bol.nw-club { background: #B5793A; }
+.nw-vzw circle { fill: #6E8B4E; }
+.nw-bol.nw-vzw { background: #6E8B4E; }
+.nw-legende { display: flex; flex-wrap: wrap; gap: .4rem .9rem; margin-bottom: .75rem; }
+.nw-bol { display: inline-block; width: .8rem; height: .8rem; border: 1.5px solid $ink; border-radius: 50%; margin-right: .3rem; vertical-align: -1px; }
+.nw-paneel .form-range::-webkit-slider-thumb { background: $ink; }
+.nw-paneel .form-range::-moz-range-thumb { background: $ink; }
+.nw-info { border-top: 1px solid $ink; padding-top: .5rem; overflow-wrap: anywhere; }

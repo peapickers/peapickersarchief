@@ -5,13 +5,50 @@ permalink: /about.html
 credits: true
 ---
 
+<p class="lees-eerst"><strong>Lees deze pagina eerst helemaal voor je contact opneemt.</strong> Het contactadres staat onderaan, bij <a href="#zichtbaar-maken">Het archief zichtbaar maken</a>.</p>
+
 {% include feature/alert.html text="Voorlopige tekst bij een voorbeeldarchief. Alle archiefvormers en archiefstukken op deze site zijn fictief. De placeholderbeelden hebben een watermerk, maar zijn nog niet door Glaze gegaan." color="warning" %}
 
 ## Wat Peapickers Archive is
 
 Peapickers Archive verzamelt de kunstpraktijken van particulieren: mensen die schilderen, fotograferen, tekenen, weven of boetseren, maar niet in de kunstindustrie werken. Hun werk krijgt hier een vaste plaats, een beschrijving en een publieke ingang, op een manier die veilig is voor de makers en hun werk.
 
-Het archief verkoopt niets. Er gaat geen geld in om: makers betalen niets en krijgen niets betaald, bezoekers kunnen niets kopen. Het archief groeit stap voor stap, te beginnen met één harde schijf en één kunstenaar.
+Het archief verkoopt niets. Er gaat geen geld in om: makers betalen niets en krijgen niets betaald, bezoekers kunnen niets kopen. Het archief groeit stap voor stap, te beginnen met één harde schijf en één archiefvormer.
+
+## Verzamelbeleid {#verzamelbeleid}
+
+*Voorlopige tekst, in opbouw.*
+
+**Wat verzamelt het archief?** Bijvoorbeeld: beeldend werk van niet-professionele makers uit Gent en omstreken, dat al digitaal bestaat of in samenwerking tussen archiefvormer en archivaris (en vrijwillige hulp) te digitaliseren valt. Het enige probleem is een vorm van curatoriële uniformiteit of een standaard van toelating, daar waar werk zonder diepgang kan vermeden worden.
+
+**Hoe wordt er geselecteerd?** Het selectieproces bevat twee blokken axioma's, om zo duidelijk mogelijk te maken waarom een werk wel of niet op het platform wordt toegelaten. Kunst is waanzinnig subjectief. Logica maakt een wegwerpbaar deel uit van waarom een kunstwerk striking is. We staan voor axioma's die van nature uit paradoxaal zijn in hun uitwerking.
+
+### Logische axioma's
+
+- Je bent de entiteit die het aangeboden originele kunstwerk heeft gecreëerd. Dit wordt [contractueel vastgelegd]({{ '/ledger.html' | relative_url }}).
+- Het digitale bestand is het kunstwerk. Het digitale bestand op het platform is nooit een weergave van het kunstwerk.
+- We houden rekening met de intimiteit die in elk kunstwerk vervat zit, in de vorm van [veiligheid](#veilig-tonen).
+- Het publiek maken van creatieve en intellectuele arbeid in de vorm van een digitaal bestand. Dit digitale bestand is een kopie of reproductie van het originele kunstwerk. Dit is de hoofdactiviteit van het platform.
+- De presentatie van deze bestanden zit vast in de vorm van statische webpagina's, manipuleerbaar in beperkte mate.
+- Het bekijken van de webpagina's doet beroep op de zintuiglijke ervaring. De digitale beelden zijn observeerbaar.
+- Logica is geen deel van een kunstzinnige ervaring. Het vormt wel de basiservaring per individueel brein.
+
+### Paradoxale axioma's
+
+- Het liefst willen we het werk beoordelen zonder het werk te beoordelen.
+- Geen connectie of expliciete distantiëring van het kunstwerk is raar, maar ook niet raar.
+- Individuele ervaring is een onontneembaar deel, maar niet essentieel.
+- Alle kunstwerken zijn stand-alone kunstwerken. Het zijn geen volgers van commerciële of politieke trends.
+- Een politieke boodschap afwezig laten zijn is een politieke boodschap op zichzelf.
+- Nonconform zijn is belangrijk, maar banaal.
+- Een doelpubliek voor ogen houden is niet van toepassing. Een overkoepelend doelpubliek is altijd deel van een publieke tentoonstelling.
+- Een coherent narratief op voorhand bedenken is banaal. De kijker ontwikkelt dit voor zichzelf.
+
+**Wat is het doel van wie zijn kunstwerk wil tonen?** Waarom wil je het tonen? Wat voel je in het werk (niet: wat is het werk)? Wat gebeurt er in je hoofd (niet: waarom)? Wat is de relatie van jezelf als entiteit ten opzichte van wat je wil tentoonstellen?
+
+**Wat niet?** Werk waarvan de maker niet zelf de rechten heeft, werk met herkenbare personen zonder hun toestemming (een modelovereenkomst om geportreteerden in het depot en later in het archief te ontvangen), werk dat technisch niet te bewaren valt.
+
+**Hoeveel per archiefvormer?** Startafspraak: 3 tot 30 stukken per archiefvormer. Liever een samenhangende selectie dan een volledige harde schijf.
 
 ## Hoe een werk in het archief komt
 
