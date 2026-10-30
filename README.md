@@ -2,7 +2,7 @@
 
 Het archief van Peapickers: kunstpraktijken van mensen die maken buiten de kunstindustrie, veilig bewaard, beschreven en online getoond. **Het archief verkoopt niets.**
 
-Gebouwd met [CollectionBuilder-CSV](https://collectionbuilder.github.io/) in dezelfde stijl als Peapicker's Postershop (Courier Prime, zwarte kaders van 1 px), maar met een neutraal grijze achtergrond (#EBEBEB, volgens ISO 3664 en ISO 12646) en zonder mand, prijzen of register.
+Gebouwd met [CollectionBuilder-CSV](https://collectionbuilder.github.io/) in dezelfde stijl als Peapickers Postershop (Courier Prime, zwarte kaders van 1 px), maar met een neutraal grijze achtergrond (#EBEBEB, volgens ISO 3664 en ISO 12646) en zonder mand, prijzen of register.
 
 Publiek adres (GitHub Pages): https://peapickers.github.io/peapickersarchief/
 

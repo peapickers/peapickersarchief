@@ -53,7 +53,7 @@ var loadingIcon, filterTextBox, browseItemsDiv;
  * Creates HTML card for displaying a collection item
  */
 function makeCard(obj) {
-    // Peapicker's Postershop: enkel het beeld; bij hover of focus wordt het iets donkerder en verschijnen titel, maker en code. Metadata en prijs pas op de posterpagina.
+    // Peapickers Postershop: enkel het beeld; bij hover of focus wordt het iets donkerder en verschijnen titel, maker en code. Metadata en prijs pas op de posterpagina.
     const placeholder = "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 3 2'%3E%3C/svg%3E";
     const itemHref = `{{ '/items/' | relative_url }}${ obj.parent ? obj.parent + ".html#" + obj.id : obj.id + ".html"}`;
     let card = '<div class="item col-6 col-md-4 col-lg-3 mb-3">';
