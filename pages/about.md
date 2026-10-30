@@ -5,29 +5,33 @@ permalink: /about.html
 credits: true
 ---
 
-<p class="lees-eerst"><strong>Lees deze pagina eerst helemaal voor je contact opneemt.</strong> Het contactadres staat onderaan, bij <a href="#zichtbaar-maken">Het archief zichtbaar maken</a>.</p>
+<p class="lees-eerst"><strong>Lees deze pagina eerst helemaal, met het verzamelbeleid en de selectiecriteria, voor je contact opneemt.</strong> Het contactadres staat onderaan, bij <a href="#zichtbaar-maken">Het archief zichtbaar maken</a>.</p>
 
 {% include feature/alert.html text="Voorlopige tekst bij een voorbeeldarchief. Alle archiefvormers en archiefstukken op deze site zijn fictief. De placeholderbeelden hebben een watermerk, maar zijn nog niet door Glaze gegaan." color="warning" %}
 
 ## Wat Peapickers Archief is
 
-Peapickers Archief verzamelt de kunstpraktijken van particulieren: mensen die schilderen, fotograferen, tekenen, weven of boetseren, maar niet in de kunstindustrie werken. Hun werk krijgt hier een vaste plaats, een beschrijving en een publieke ingang, op een manier die veilig is voor de makers en hun werk.
+Peapickers Archief verzamelt de kunstpraktijken van particulierkunstenaars en van nonprofits of onafhankelijke collectieven: mensen en groepen die schilderen, fotograferen, filmen, tekenen, weven of boetseren, maar niet in de kunstindustrie werken. Hun werk krijgt hier een vaste plaats, een beschrijving en een publieke ingang, op een manier die veilig is voor de makers en hun werk.
 
-Het archief verkoopt niets. Er gaat geen geld in om: makers betalen niets en krijgen niets betaald, bezoekers kunnen niets kopen. Het archief groeit stap voor stap, te beginnen met één harde schijf en één archiefvormer.
+Het archief verkoopt niets. Er gaat geen geld in om: makers betalen niets en krijgen niets betaald, bezoekers kunnen niets kopen. Dat blijft zo: het archief is en blijft niet-commercieel. Het archief groeit stap voor stap, te beginnen met één harde schijf en één archiefvormer.
 
 ## Verzamelbeleid {#verzamelbeleid}
 
 *Voorlopige tekst, in opbouw.*
 
-**Wat verzamelt het archief?** Bijvoorbeeld: beeldend werk van niet-professionele makers uit Gent en omstreken, dat al digitaal bestaat of in samenwerking tussen archiefvormer en archivaris (en vrijwillige hulp) te digitaliseren valt. Het enige probleem is een vorm van curatoriële uniformiteit of een standaard van toelating, daar waar werk zonder diepgang kan vermeden worden.
+Dit verzamelbeleid is een curatoriële richtlijn: het helpt je te beslissen of je jouw archiefstukken hier wil onderbrengen.
 
-**Hoe wordt er geselecteerd?** Het selectieproces bevat twee blokken axioma's, om zo duidelijk mogelijk te maken waarom een werk wel of niet op het platform wordt toegelaten. Kunst is waanzinnig subjectief. Logica maakt een wegwerpbaar deel uit van waarom een kunstwerk striking is. We staan voor axioma's die van nature uit paradoxaal zijn in hun uitwerking.
+**Voor wie?** Particulierkunstenaars en nonprofits of onafhankelijke collectieven die het sociaal-culturele doel van het archief zonder overtuigingswerk inzien en gelijkgestemd willen meewerken. Verder is er geen afbakening. Het draait om vertrouwen.
+
+**Wat verzamelt het archief?** Audiovisueel werk dat al digitaal bestaat, of dat in samenwerking tussen archiefvormer en archivaris (en vrijwillige hulp) te digitaliseren valt. Curatoriële uniformiteit heeft bij het zichtbaar maken van een archief geen zin. De context ontstaat later, bij wie het archief bekijkt.
+
+**Hoe wordt er geselecteerd?** Het selectieproces bevat twee blokken axioma's, om zo duidelijk mogelijk te maken waarom een werk wel of niet op het platform wordt toegelaten. Kunst is waanzinnig subjectief. Logica maakt een wegwerpbaar deel uit van waarom een kunstwerk treft. We staan voor axioma's die van nature uit paradoxaal zijn in hun uitwerking.
 
 ### Logische axioma's
 
 - Je bent de entiteit die het aangeboden originele kunstwerk heeft gecreëerd. Dit wordt [contractueel vastgelegd]({{ '/ledger.html' | relative_url }}).
-- Het digitale bestand is het kunstwerk. Het digitale bestand op het platform is nooit een weergave van het kunstwerk.
-- We houden rekening met de intimiteit die in elk kunstwerk vervat zit, in de vorm van [veiligheid](#veilig-tonen).
+- Het digitale bestand is een representatie van het kunstwerk. Het digitale bestand op het platform is een gehercontextualiseerde weergave van het kunstwerk.
+- Het archiefstuk wordt nooit door de maker gecreëerd met als doel opname in het archief.
 - Het publiek maken van creatieve en intellectuele arbeid in de vorm van een digitaal bestand. Dit digitale bestand is een kopie of reproductie van het originele kunstwerk. Dit is de hoofdactiviteit van het platform.
 - De presentatie van deze bestanden zit vast in de vorm van statische webpagina's, manipuleerbaar in beperkte mate.
 - Het bekijken van de webpagina's doet beroep op de zintuiglijke ervaring. De digitale beelden zijn observeerbaar.
@@ -48,7 +52,7 @@ Het archief verkoopt niets. Er gaat geen geld in om: makers betalen niets en kri
 
 **Wat niet?** Werk waarvan de maker niet zelf de rechten heeft, werk met herkenbare personen zonder hun toestemming (een modelovereenkomst om geportreteerden in het depot en later in het archief te ontvangen), werk dat technisch niet te bewaren valt.
 
-**Hoeveel per archiefvormer?** Startafspraak: 3 tot 30 stukken per archiefvormer. Liever een samenhangende selectie dan een volledige harde schijf.
+**Hoeveel per archiefvormer?** Dat wordt per archiefvormer bekeken en aangevoeld. Er is geen minimum of maximum.
 
 ## Hoe een werk in het archief komt
 
@@ -61,6 +65,8 @@ Het archief verkoopt niets. Er gaat geen geld in om: makers betalen niets en kri
 ## Veilig tonen
 
 {% include veiligheidsblok.html id="-over" %}
+
+In elk archiefstuk zit intimiteit. Daarom maakt de maker eerst zelf een voorselectie, kijkt de archivaris een tweede keer, en wordt alles zo veilig mogelijk gepubliceerd.
 
 Wat Peapickers doet om de beelden te beschermen:
 
@@ -106,4 +112,6 @@ Contact: [peapickers@proton.me](mailto:peapickers@proton.me)
 
 ## Wie het archief beheert
 
-Peapickers Archief wordt beheerd door de archivaris van Peapickers. Later kan het archief deel worden van vzw Peapickers; dat gebeurt pas wanneer die vzw is opgericht.
+Peapickers Archief wordt beheerd door de archivaris, als particulier. Peapickers is de naam waaronder het archief, de postershop en de printshop samen vallen.
+
+Het archief blijft altijd niet-commercieel. De commerciële activiteiten (postershop en printshop) krijgen later een eigen juridische vorm: een vzw, een zelfstandige activiteit in bijberoep of een vennootschap. Die keuze ligt nog niet vast en valt ten vroegste na februari 2029. Tot dan wordt er niets verkocht. Elke archiefvormer wordt vooraf schriftelijk verwittigd en kan dan weigeren of terugtrekken.
