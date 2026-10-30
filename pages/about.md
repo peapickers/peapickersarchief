@@ -11,7 +11,7 @@ credits: true
 
 ## Wat Peapickers Archief is
 
-Peapickers Archief verzamelt de kunstpraktijken van particulierkunstenaars en van nonprofits of onafhankelijke collectieven: mensen en groepen die schilderen, fotograferen, filmen, tekenen, weven of boetseren, maar niet in de kunstindustrie werken. Hun werk krijgt hier een vaste plaats, een beschrijving en een publieke ingang, op een manier die veilig is voor de makers en hun werk.
+Peapickers Archief verzamelt de kunstpraktijken van particulierkunstenaars en van nonprofits of onafhankelijke collectieven: mensen die schilderen, fotograferen, tekenen, weven of boetseren, maar niet in de kunstindustrie werken. Hun werk krijgt hier een vaste plaats, een beschrijving en een publieke ingang, op een manier die veilig is voor de makers en hun werk.
 
 Het archief verkoopt niets. Er gaat geen geld in om: makers betalen niets en krijgen niets betaald, bezoekers kunnen niets kopen. Dat blijft zo: het archief is en blijft niet-commercieel. Het archief groeit stap voor stap, te beginnen met één harde schijf en één archiefvormer.
 
@@ -21,9 +21,9 @@ Het archief verkoopt niets. Er gaat geen geld in om: makers betalen niets en kri
 
 Dit verzamelbeleid is een curatoriële richtlijn: het helpt je te beslissen of je jouw archiefstukken hier wil onderbrengen.
 
-**Voor wie?** Particulierkunstenaars en nonprofits of onafhankelijke collectieven die het sociaal-culturele doel van het archief zonder overtuigingswerk inzien en gelijkgestemd willen meewerken. Verder is er geen afbakening. Het draait om vertrouwen.
+**Voor wie?** Particulierkunstenaars en leden van nonprofits of onafhankelijke collectieven die het sociaal-culturele doel van het archief zonder overtuigingswerk inzien en gelijkgestemd willen meewerken. Verder is er geen afbakening. Het draait om vertrouwen. Bij een collectief wordt elk lid apart archiefvormer, want de auteursrechten liggen bij wie het werk maakte.
 
-**Wat verzamelt het archief?** Audiovisueel werk dat al digitaal bestaat, of dat in samenwerking tussen archiefvormer en archivaris (en vrijwillige hulp) te digitaliseren valt. Curatoriële uniformiteit heeft bij het zichtbaar maken van een archief geen zin. De context ontstaat later, bij wie het archief bekijkt.
+**Wat verzamelt het archief?** Voornamelijk beeldend werk dat al digitaal bestaat, of dat in samenwerking tussen archiefvormer en archivaris (en vrijwillige hulp) te digitaliseren valt. Curatoriële uniformiteit heeft bij het zichtbaar maken van een archief geen zin. De context ontstaat later, bij wie het archief bekijkt. Film, video en geluid neemt het archief enkel uitzonderlijk op.
 
 **Hoe wordt er geselecteerd?** Het selectieproces bevat twee blokken axioma's, om zo duidelijk mogelijk te maken waarom een werk wel of niet op het platform wordt toegelaten. Kunst is waanzinnig subjectief. Logica maakt een wegwerpbaar deel uit van waarom een kunstwerk treft. We staan voor axioma's die van nature uit paradoxaal zijn in hun uitwerking.
 
@@ -112,6 +112,8 @@ Contact: [peapickers@proton.me](mailto:peapickers@proton.me)
 
 ## Wie het archief beheert
 
-Peapickers Archief wordt beheerd door de archivaris, als particulier. Peapickers is de naam waaronder het archief, de postershop en de printshop samen vallen.
+Peapickers Archief wordt beheerd door de archivaris, als particulier.
 
-Het archief blijft altijd niet-commercieel. De commerciële activiteiten (postershop en printshop) krijgen later een eigen juridische vorm: een vzw, een zelfstandige activiteit in bijberoep of een vennootschap. Die keuze ligt nog niet vast en valt ten vroegste na februari 2029. Tot dan wordt er niets verkocht. Elke archiefvormer wordt vooraf schriftelijk verwittigd en kan dan weigeren of terugtrekken.
+**Mensenwerk.** De structuur van deze website is gebouwd met hulp van AI (Claude). De inhoud van het archief wordt uitsluitend door mensen behandeld: archiefstukken aannemen, beschrijven, verkleinen, watermerken en in de lijsten zetten gebeurt altijd met de hand. Archiefstukken, beschrijvingen en persoonsgegevens gaan nooit naar een AI-hulpmiddel. Peapickers is de naam waaronder het archief, de postershop en de printshop samen vallen.
+
+Het archief blijft altijd niet-commercieel. Voor de commerciële activiteiten (postershop en printshop) wordt later vzw peapickers opgericht, ten vroegste na februari 2029. Tot dan wordt er niets verkocht. Elke archiefvormer wordt vooraf schriftelijk verwittigd en kan dan weigeren of terugtrekken.
