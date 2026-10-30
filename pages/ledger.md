@@ -8,7 +8,7 @@ permalink: /ledger.html
 
 Elk administratief stuk van Peapickers Archive komt hier: werkdocumenten, beleid, overeenkomsten, mails, overdrachtsverslagen, beslissingen, verwijderverzoeken en het logboek. Zo kan iedereen nagaan hoe een archiefstuk in het archief kwam en wat ermee gebeurde.
 
-Elk stuk heet **JJJJ-MM-DD_titel**: de datum van het stuk, dan een korte titel. Ze staan in volgorde van datum: het oudste stuk bovenaan.
+Elk stuk heet **JJJJ-MM-DD_titel**: de datum van het stuk, dan een korte titel. Ze staan in volgorde van datum: het nieuwste stuk bovenaan.
 
 {% include feature/alert.html text="Alleen het stappenplan van 2026-10-30 is echt. Alle andere stukken zijn fictieve voorbeelden: ze tonen hoe het stappenplan de komende maanden uitgevoerd wordt, met tien voorbeeldauteurs." color="warning" %}
 

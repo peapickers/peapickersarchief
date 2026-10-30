@@ -2,7 +2,7 @@
     Public Ledger van Peapickers Archive: elk administratief stuk als YYYY-MM-DD_titel, in volgorde van datum.
     Data: _data/ledger.csv. Documenten staan in ledger/ en heten zoals de kolom "naam".
 {% endcomment %}
-{%- assign stukken = site.data.ledger | sort: "datum" -%}
+{%- assign stukken = site.data.ledger | sort: "datum" | reverse -%}
 {%- assign soorten = site.data.ledger | map: "soort" | uniq | sort -%}
 {%- assign echt = site.data.ledger | where: "status", "echt" -%}
 <div class="ledger-telling">
