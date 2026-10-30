@@ -53,7 +53,7 @@ Het archief verkoopt niets. Er gaat geen geld in om: makers betalen niets en kri
 ## Hoe een werk in het archief komt
 
 1. **Kennismaking.** De archivaris en de maker bekijken samen welk werk er is en wat de maker wil bewaren.
-2. **Overeenkomst.** Per maker is er één schriftelijke depotovereenkomst. Daarin staat dat de maker eigenaar blijft van het werk en van alle rechten, wat het archief mag tonen en dat de maker altijd kan vragen om iets weg te halen.
+2. **Overeenkomst.** Per maker is er één schriftelijke ontsluitingsovereenkomst. Daarin staat dat de maker eigenaar blijft van het werk en van alle rechten, wat het archief mag tonen en dat de maker altijd kan vragen om iets weg te halen.
 3. **Overdracht.** De maker geeft een digitale kopie van elk werk. Die kopie wordt bewaard op de archiefschijf, met een reservekopie op een tweede plek.
 4. **Beschrijving.** De archivaris beschrijft elk werk: titel, jaar, techniek, materiaal, afmetingen, onderwerpen, herkomst. De maker leest mee.
 5. **Publicatie.** Alleen wat de maker toestaat komt online, verkleind en met watermerk.

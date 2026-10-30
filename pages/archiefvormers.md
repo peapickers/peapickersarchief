@@ -59,7 +59,7 @@ Een archiefvormer is de auteur die zijn of haar werk in bewaring geeft. Elke arc
     <dl>
         <dt>Periode</dt><dd>{{ av.periode }}</dd>
         <dt>In bewaring sinds</dt><dd>{{ av.datum }}</dd>
-        <dt>Overeenkomst</dt><dd>Depotovereenkomst {{ av.overeenkomst }}</dd>
+        <dt>Overeenkomst</dt><dd>Ontsluitingsovereenkomst {{ av.overeenkomst }}</dd>
         <dt>Archiefstukken</dt><dd>{{ av.aantal }}, waarvan {{ av.getoond }} met beeld</dd>
     </dl>
     <p class="small">{{ av.bio }}</p>
