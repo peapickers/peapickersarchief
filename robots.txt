@@ -2,7 +2,7 @@
 layout: null
 permalink: /robots.txt
 ---
-# Peapickers Archive: geen AI-training op het werk van de makers.
+# Peapickers Archief: geen AI-training op het werk van de makers.
 User-agent: GPTBot
 Disallow: /
 User-agent: ChatGPT-User

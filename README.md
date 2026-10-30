@@ -1,4 +1,4 @@
-# Peapickers Archive
+# Peapickers Archief
 
 Het archief van Peapickers: kunstpraktijken van mensen die maken buiten de kunstindustrie, veilig bewaard, beschreven en online getoond. **Het archief verkoopt niets.**
 

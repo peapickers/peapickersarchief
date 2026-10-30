@@ -18,7 +18,7 @@ source-code: https://github.com/CollectionBuilder/collectionbuilder-csv
 # SITE SETTINGS
 #
 # title of site appears in banner
-title: Peapickers Archive
+title: Peapickers Archief
 # tagline, a short phrase that will appear throughout the site in the top banner
 tagline: Archiefcollectie in vrije vorm van Particulierkunstenaars
 # description appears in meta tags and other locations
@@ -27,7 +27,7 @@ description: "Een groeiend archief van kunstpraktijken van mensen buiten de kuns
 # keywords, a short list of subjects describing the collection, separated by semicolon, to appear in rich markup
 keywords: archief; archiefstukken; kunstpraktijken; lokale makers; Gent
 # creator of the digital collection, to appear in meta tags; we typically use our GitHub usernames but feel free to just use your name
-author: Peapickers Archive
+author: Peapickers Archief
 
 ##########
 # COLLECTION SETTINGS
@@ -50,7 +50,7 @@ metadata: peapickers-archief
 #
 # Enter name and link for your organization (replacing the name and links below)
 # These values will be used in attribution and data 
-organization-name: "Peapickers Archive"
+organization-name: "Peapickers Archief"
 organization-link: 
 # Add logo image links if you would like them to appear in banner and footer. Delete or leave blank to remove logos.
 organization-logo-banner: 

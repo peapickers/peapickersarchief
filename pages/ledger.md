@@ -6,7 +6,7 @@ permalink: /ledger.html
 
 ## Public Ledger
 
-Elk administratief stuk van Peapickers Archive komt hier: werkdocumenten, beleid, overeenkomsten, mails, overdrachtsverslagen, beslissingen, verwijderverzoeken en het logboek. Zo kan iedereen nagaan hoe een archiefstuk in het archief kwam en wat ermee gebeurde.
+Elk administratief stuk van Peapickers Archief komt hier: werkdocumenten, beleid, overeenkomsten, mails, overdrachtsverslagen, beslissingen, verwijderverzoeken en het logboek. Zo kan iedereen nagaan hoe een archiefstuk in het archief kwam en wat ermee gebeurde.
 
 Elk stuk heet **JJJJ-MM-DD_titel**: de datum van het stuk, dan een korte titel. Ze staan in volgorde van datum: het nieuwste stuk bovenaan.
 

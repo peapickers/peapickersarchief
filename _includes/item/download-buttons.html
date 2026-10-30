@@ -14,7 +14,7 @@
     <a href="{{ year | strip | prepend: '/timeline.html#y' | relative_url }}" class="btn btn-outline-primary">Op de tijdlijn</a>{% endif %}
     {% if page.latitude and page.longitude %}
     <a href="{{ '/map.html?location=' | append: page.latitude  | append: ',' | append: page.longitude | append: '&marker=' | append: page.objectid | relative_url }}" class="btn btn-outline-primary">Op de kaart</a>{% endif %}
-    {%- comment -%} Peapickers Archive: geen downloadknop. Het archief toont alleen een verkleinde kopie met watermerk. {%- endcomment -%}
+    {%- comment -%} Peapickers Archief: geen downloadknop. Het archief toont alleen een verkleinde kopie met watermerk. {%- endcomment -%}
 </div>
 {% if page.object_transcript %}
 <div class="collapse mt-3" id="collapseTranscript{{ page.objectid }}">

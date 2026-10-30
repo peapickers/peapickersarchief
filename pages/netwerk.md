@@ -57,7 +57,7 @@ Zo is het archief gegroeid: vanaf de archivaris, de eerste node, via wie wie aan
     function esc(s) { return String(s).replace(/[&<>"']/g, function (c) { return { '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;' }[c]; }); }
 
     // Nodes: de archivaris (vast beginpunt), de archiefvormers en de groepen
-    var nodes = [{ id: 'Jonas', naam: 'Jonas', soort: 'archivaris', info: 'Archivaris van Peapickers Archive' }];
+    var nodes = [{ id: 'Jonas', naam: 'Jonas', soort: 'archivaris', info: 'Archivaris van Peapickers Archief' }];
     data.archiefvormers.forEach(function (a) { nodes.push({ id: a.id, naam: a.naam, soort: 'archiefvormer', info: 'Archiefvormer ' + a.id + ' · ' + a.praktijk + ', ' + a.plaats, url: a.url }); });
     data.groepen.forEach(function (g) { nodes.push({ id: g.id, naam: g.naam, soort: g.soort, info: g.soort.charAt(0).toUpperCase() + g.soort.slice(1) + ', ' + g.plaats, url: g.website }); });
     var perId = {}; nodes.forEach(function (n) { perId[n.id] = n; });

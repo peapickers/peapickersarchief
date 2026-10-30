@@ -9,9 +9,9 @@ credits: true
 
 {% include feature/alert.html text="Voorlopige tekst bij een voorbeeldarchief. Alle archiefvormers en archiefstukken op deze site zijn fictief. De placeholderbeelden hebben een watermerk, maar zijn nog niet door Glaze gegaan." color="warning" %}
 
-## Wat Peapickers Archive is
+## Wat Peapickers Archief is
 
-Peapickers Archive verzamelt de kunstpraktijken van particulieren: mensen die schilderen, fotograferen, tekenen, weven of boetseren, maar niet in de kunstindustrie werken. Hun werk krijgt hier een vaste plaats, een beschrijving en een publieke ingang, op een manier die veilig is voor de makers en hun werk.
+Peapickers Archief verzamelt de kunstpraktijken van particulieren: mensen die schilderen, fotograferen, tekenen, weven of boetseren, maar niet in de kunstindustrie werken. Hun werk krijgt hier een vaste plaats, een beschrijving en een publieke ingang, op een manier die veilig is voor de makers en hun werk.
 
 Het archief verkoopt niets. Er gaat geen geld in om: makers betalen niets en krijgen niets betaald, bezoekers kunnen niets kopen. Het archief groeit stap voor stap, te beginnen met één harde schijf en één archiefvormer.
 
@@ -104,4 +104,4 @@ Contact: *[e-mailadres van het archief volgt]*
 
 ## Wie het archief beheert
 
-Peapickers Archive wordt beheerd door de archivaris van Peapickers. Later kan het archief deel worden van vzw Peapickers; dat gebeurt pas wanneer die vzw is opgericht.
+Peapickers Archief wordt beheerd door de archivaris van Peapickers. Later kan het archief deel worden van vzw Peapickers; dat gebeurt pas wanneer die vzw is opgericht.
