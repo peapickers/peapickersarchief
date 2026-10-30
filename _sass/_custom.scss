@@ -112,11 +112,11 @@ a[class*="tagcloud"] { white-space: normal; max-width: 100%; overflow-wrap: anyw
 .btn-outline-dark:focus:not(:hover) { background-color: transparent !important; color: $ink !important; box-shadow: none; }
 .btn-outline-dark:focus-visible { outline: 2px solid $ink; outline-offset: 2px; }
 
-// Filters in- en uitklappen (standaard dicht op smalle schermen)
-.pp-filters-kop { display: flex; justify-content: space-between; align-items: center; cursor: pointer; list-style: none; }
-.pp-filters-kop::-webkit-details-marker { display: none; }
+// Balk met Filters (in- en uitklappen, standaard dicht op smalle schermen) en daarnaast Shuffle en weergave
+.pp-filters-balk { display: flex; flex-wrap: wrap; justify-content: space-between; align-items: center; gap: .5rem; }
+.pp-filters-kop { display: inline-flex; align-items: center; gap: .6rem; background: none; border: 0; padding: 0; color: inherit; cursor: pointer; }
 .pp-filters-teken::before { content: "+"; font-size: 1.4rem; line-height: 1; }
-.pp-filters-uitklap[open] .pp-filters-teken::before { content: "−"; }
+.pp-filters-kop[aria-expanded="true"] .pp-filters-teken::before { content: "−"; }
 .pp-filters-kop:focus-visible { outline: 2px solid $ink; outline-offset: 2px; }
 @media (max-width: 991.98px) { .pp-filters { padding: .6rem 1rem; } }
 .veiligheidsblok-meer summary { cursor: pointer; text-decoration: underline; text-underline-offset: 2px; }

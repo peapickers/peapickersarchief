@@ -1,5 +1,5 @@
 ---
-# Overzicht van Peapickers Archive: filters altijd open in een kolom links (ongeveer 30%), rechts de archiefstukken als raster of per jaar.
+# Overzicht van Peapickers Archive: filterkolom links (ongeveer 30%) met Shuffle en weergave naast de knop Filters, rechts de archiefstukken als raster of per jaar.
 layout: page
 custom-foot: js/archief-js.html
 ---
@@ -7,34 +7,39 @@ custom-foot: js/archief-js.html
 
 <div class="pp-browse">
     <aside class="pp-filters" aria-label="Filters">
-        <details class="pp-filters-uitklap" id="pp-filterblok">
-        <summary class="pp-filters-kop"><span class="h5 mb-0">Filters</span><span class="pp-filters-teken" aria-hidden="true"></span></summary>
+        <div class="pp-filters-balk">
+            <button type="button" class="pp-filters-kop" id="pp-filterknop" aria-expanded="false" aria-controls="pp-filterblok"><span class="h5 mb-0">Filters</span><span class="pp-filters-teken" aria-hidden="true"></span></button>
+            <div class="d-flex flex-wrap gap-2">
+                <button type="button" class="btn btn-sm btn-outline-dark" id="pp-shuffle" title="Alle filters wissen en de archiefstukken in willekeurige volgorde tonen">Shuffle</button>
+                <div class="btn-group btn-group-sm" role="group" aria-label="Weergave">
+                    <input type="radio" class="btn-check" name="pp-weergave" id="pp-w-raster" value="raster" checked>
+                    <label class="btn btn-outline-dark" for="pp-w-raster">Raster</label>
+                    <input type="radio" class="btn-check" name="pp-weergave" id="pp-w-jaar" value="jaar">
+                    <label class="btn btn-outline-dark" for="pp-w-jaar">Per jaar</label>
+                </div>
+            </div>
+        </div>
+        <div class="pp-filters-inhoud" id="pp-filterblok" hidden>
         <div class="d-flex justify-content-end mt-2 mb-2">
             <button type="button" class="btn btn-link btn-sm p-0 text-dark" id="pp-reset">Alles wissen</button>
         </div>
         <label class="visually-hidden" for="pp-zoek">Zoeken</label>
         <input type="search" class="form-control mb-3" id="pp-zoek" placeholder="Zoeken ...">
         <div id="pp-facetten"></div>
-        </details>
+        </div>
     </aside>
     <script>
     // Filters standaard open op brede schermen, dicht op gsm en tablet (zodat de archiefstukken meteen zichtbaar zijn).
-    if (window.matchMedia('(min-width: 992px)').matches) document.getElementById('pp-filterblok').open = true;
+    (function () {
+        var knop = document.getElementById('pp-filterknop'), blok = document.getElementById('pp-filterblok');
+        function zet(open) { blok.hidden = !open; knop.setAttribute('aria-expanded', open); }
+        knop.addEventListener('click', function () { zet(blok.hidden); });
+        zet(window.matchMedia('(min-width: 992px)').matches);
+    })();
     </script>
 
     <section class="pp-resultaat" aria-label="Archiefstukken">
-        <div class="d-flex flex-wrap justify-content-between align-items-center gap-2 mb-3">
-            <div id="pp-aantal" class="small" role="status" aria-live="polite"></div>
-            <div class="d-flex flex-wrap gap-2">
-            <button type="button" class="btn btn-sm btn-outline-dark" id="pp-shuffle" title="Alle filters wissen en de archiefstukken in willekeurige volgorde tonen">Shuffle</button>
-            <div class="btn-group btn-group-sm" role="group" aria-label="Weergave">
-                <input type="radio" class="btn-check" name="pp-weergave" id="pp-w-raster" value="raster" checked>
-                <label class="btn btn-outline-dark" for="pp-w-raster">Raster</label>
-                <input type="radio" class="btn-check" name="pp-weergave" id="pp-w-jaar" value="jaar">
-                <label class="btn btn-outline-dark" for="pp-w-jaar">Per jaar</label>
-            </div>
-            </div>
-        </div>
+        <div id="pp-aantal" class="small mb-3" role="status" aria-live="polite"></div>
         <div id="pp-items"></div>
     </section>
 </div>

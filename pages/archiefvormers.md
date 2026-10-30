@@ -13,26 +13,31 @@ Een archiefvormer is de auteur die zijn of haar werk in bewaring geeft. Elke arc
 {%- assign stukken = site.data[site.metadata] %}
 <div class="pp-browse">
     <aside class="pp-filters" aria-label="Filters">
-        <details class="pp-filters-uitklap" id="av-filterblok">
-        <summary class="pp-filters-kop"><span class="h5 mb-0">Filters</span><span class="pp-filters-teken" aria-hidden="true"></span></summary>
+        <div class="pp-filters-balk">
+            <button type="button" class="pp-filters-kop" id="av-filterknop" aria-expanded="false" aria-controls="av-filterblok"><span class="h5 mb-0">Filters</span><span class="pp-filters-teken" aria-hidden="true"></span></button>
+            <button type="button" class="btn btn-sm btn-outline-dark" id="av-shuffle" title="Alle filters wissen en de archiefvormers in willekeurige volgorde tonen">Shuffle</button>
+        </div>
+        <div class="pp-filters-inhoud" id="av-filterblok" hidden>
         <div class="d-flex justify-content-end mt-2 mb-2">
             <button type="button" class="btn btn-link btn-sm p-0 text-dark" id="av-reset">Alles wissen</button>
         </div>
         <label class="visually-hidden" for="av-zoek">Zoeken</label>
         <input type="search" class="form-control mb-3" id="av-zoek" placeholder="Zoeken ...">
         <div id="av-facetten"></div>
-        </details>
+        </div>
     </aside>
     <script>
     // Filters standaard open op brede schermen, dicht op gsm en tablet (zodat de archiefstukken meteen zichtbaar zijn).
-    if (window.matchMedia('(min-width: 992px)').matches) document.getElementById('av-filterblok').open = true;
+    (function () {
+        var knop = document.getElementById('av-filterknop'), blok = document.getElementById('av-filterblok');
+        function zet(open) { blok.hidden = !open; knop.setAttribute('aria-expanded', open); }
+        knop.addEventListener('click', function () { zet(blok.hidden); });
+        zet(window.matchMedia('(min-width: 992px)').matches);
+    })();
     </script>
 
     <section class="pp-resultaat" aria-label="Archiefvormers">
-        <div class="d-flex flex-wrap justify-content-between align-items-center gap-2 mb-3">
-            <div id="av-aantal" class="small" role="status" aria-live="polite"></div>
-            <button type="button" class="btn btn-sm btn-outline-dark" id="av-shuffle" title="Alle filters wissen en de archiefvormers in willekeurige volgorde tonen">Shuffle</button>
-        </div>
+        <div id="av-aantal" class="small mb-3" role="status" aria-live="polite"></div>
         <div class="av-lijst" id="av-lijst">
 {% for av in site.data.archiefvormers %}
 {%- assign eigen = stukken | where: "creator", av.naam -%}
