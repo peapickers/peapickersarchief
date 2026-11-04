@@ -116,4 +116,4 @@ Peapickers Archief wordt beheerd door de archivaris, als particulier.
 
 **Mensenwerk.** De structuur van deze website is gebouwd met hulp van AI (Claude). De inhoud van het archief wordt uitsluitend door mensen behandeld: archiefstukken aannemen, beschrijven, verkleinen, watermerken en in de lijsten zetten gebeurt altijd met de hand. Archiefstukken, beschrijvingen en persoonsgegevens gaan nooit naar een AI-hulpmiddel. Peapickers is de naam waaronder het archief, de postershop en de printshop samen vallen.
 
-Het archief blijft altijd niet-commercieel. Voor de commerciële activiteiten (postershop en printshop) wordt later vzw peapickers opgericht, ten vroegste na februari 2029. Tot dan wordt er niets verkocht. Elke archiefvormer wordt vooraf schriftelijk verwittigd en kan dan weigeren of terugtrekken.
+Het archief blijft altijd niet-commercieel. Voor de commerciële activiteiten (postershop en printshop) wordt vzw peapickers opgericht. Elke archiefvormer wordt vooraf schriftelijk verwittigd en kan dan weigeren of terugtrekken.
